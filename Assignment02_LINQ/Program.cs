@@ -15,6 +15,26 @@ namespace Assignment02_LINQ
             new Product { ProductID=7, ProductName="Tofu", Category="Produce", UnitPrice=55, UnitsInStock=5 },
             new Product { ProductID=18, ProductName="Luxury Item", Category="Special", UnitPrice=120, UnitsInStock=2 }
         };
+
+        static List<Customer> Customers = new List<Customer>
+        {
+            new Customer { CustomerID="C1", CompanyName="ABC Co", Country="Germany",
+                Orders = new List<Order> {
+                    new Order{OrderID=1, Total=100},
+                    new Order{OrderID=2, Total=200}
+                }
+            },
+            new Customer { CustomerID="C2", CompanyName="XYZ Ltd", Country="France",
+                Orders = new List<Order> {
+                    new Order{OrderID=3, Total=300}
+                }
+            },
+            new Customer { CustomerID="C3", CompanyName="Tech Corp", Country="Germany",
+                Orders = new List<Order> {
+                    new Order{OrderID=4, Total=150}
+                }
+            }
+        };
         static void Main(string[] args)
         {
             
