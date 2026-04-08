@@ -73,6 +73,15 @@ namespace Assignment02_LINQ
             Console.WriteLine(resulttt);
             #endregion
 
+            #region Question06
+            var groups = ProductList.GroupBy(p => p.Category);
+
+            foreach (var g in groups)
+            {
+                Console.WriteLine($"{g.Key} - Count: {g.Count()}");
+            }
+            #endregion
+
         }
     }
 }
