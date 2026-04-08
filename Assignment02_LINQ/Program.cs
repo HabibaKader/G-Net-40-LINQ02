@@ -44,6 +44,13 @@ namespace Assignment02_LINQ
             foreach (var p in result) Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
             #endregion
 
+            #region Question02
+            var page = ProductList.Skip(5)
+                                  .Take(5);
+
+            foreach (var p in page) Console.WriteLine(p.ProductName);
+            #endregion
+
         }
     }
 }
