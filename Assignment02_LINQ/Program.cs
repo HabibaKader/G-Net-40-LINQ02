@@ -82,6 +82,23 @@ namespace Assignment02_LINQ
             }
             #endregion
 
+            #region Question07
+            var ggroups = ProductList
+                                    .GroupBy(p => p.Category)
+                                    .Select(g => new
+                                    {
+                                        Category = g.Key,
+                                        Names = g.Select(p => p.ProductName)
+                                    });
+
+            foreach (var g in ggroups)
+            {
+                Console.WriteLine(g.Category);
+                foreach (var name in g.Names)
+                    Console.WriteLine($" - {name}");
+            }
+            #endregion
+
         }
     }
 }
