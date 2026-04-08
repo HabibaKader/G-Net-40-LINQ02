@@ -125,6 +125,12 @@ namespace Assignment02_LINQ
             }
             #endregion
 
+            #region Question10
+            int total = ProductList.Sum(p => p.UnitsInStock);
+
+            Console.WriteLine(total);
+            #endregion
+
         }
     }
 }
