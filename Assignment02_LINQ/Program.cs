@@ -164,6 +164,15 @@ namespace Assignment02_LINQ
 
             foreach (var c in rr) Console.WriteLine(c);
             #endregion
+
+            #region Question15
+            var dict = ProductList.ToDictionary(p => p.ProductID);
+
+            if (dict.TryGetValue(18, out var product))
+            {
+                Console.WriteLine(product.ProductName);
+            }
+            #endregion
         }
     }
 }
