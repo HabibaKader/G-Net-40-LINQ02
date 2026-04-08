@@ -137,6 +137,14 @@ namespace Assignment02_LINQ
 
             Console.WriteLine($"Min: {min}, Max: {max}");
             #endregion
+
+            #region Question12
+            var categories = ProductList
+                                        .Select(p => p.Category)
+                                        .Distinct();
+
+            foreach (var c in categories) Console.WriteLine(c);
+            #endregion
         }
     }
 }
