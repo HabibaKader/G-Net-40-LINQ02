@@ -179,6 +179,12 @@ namespace Assignment02_LINQ
 
             Console.WriteLine(prod.ProductName);
             #endregion
+
+            #region Question17
+            var Product = ProductList.FirstOrDefault(p => p.UnitPrice > 500);
+
+            Console.WriteLine(Product == null ? "Not found" : Product.ProductName);
+            #endregion
         }
     }
 }
