@@ -131,6 +131,12 @@ namespace Assignment02_LINQ
             Console.WriteLine(total);
             #endregion
 
+            #region Question11
+            var min = ProductList.Min(p => p.UnitPrice);
+            var max = ProductList.Max(p => p.UnitPrice);
+
+            Console.WriteLine($"Min: {min}, Max: {max}");
+            #endregion
         }
     }
 }
