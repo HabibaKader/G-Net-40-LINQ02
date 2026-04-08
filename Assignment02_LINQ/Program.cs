@@ -58,6 +58,13 @@ namespace Assignment02_LINQ
             foreach (var p in resultt) Console.WriteLine(p.ProductName);
             #endregion
 
+            #region Question04
+            bool res = ProductList.Where(p => p.Category == "Seafood")
+                                  .All(p => p.UnitsInStock > 0);
+
+            Console.WriteLine(res);
+            #endregion
+
         }
     }
 }
