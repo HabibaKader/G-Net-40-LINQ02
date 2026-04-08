@@ -108,6 +108,23 @@ namespace Assignment02_LINQ
             foreach (var c in output) Console.WriteLine(c);
             #endregion
 
+            #region Question09
+            var Result =
+                        from c in Customers
+                        group c by c.Country into g
+                        select new
+                        {
+                            Country = g.Key,
+                            Count = g.Count(),
+                            TotalOrderValue = g.SelectMany(c => c.Orders).Sum(o => o.Total)
+                        };
+
+            foreach (var item in Result)
+            {
+                Console.WriteLine($"{item.Country} - {item.Count} - {item.TotalOrderValue}");
+            }
+            #endregion
+
         }
     }
 }
