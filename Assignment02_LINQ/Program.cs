@@ -99,6 +99,15 @@ namespace Assignment02_LINQ
             }
             #endregion
 
+            #region Question08
+            var output = ProductList
+                                    .GroupBy(p => p.Category)
+                                    .Where(g => g.Count() > 3)
+                                    .Select(g => g.Key);
+
+            foreach (var c in output) Console.WriteLine(c);
+            #endregion
+
         }
     }
 }
