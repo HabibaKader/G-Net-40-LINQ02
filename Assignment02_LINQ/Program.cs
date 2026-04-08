@@ -65,6 +65,14 @@ namespace Assignment02_LINQ
             Console.WriteLine(res);
             #endregion
 
+            #region Question05
+            int[] ids = { 3, 9, 13, 18 };
+
+            bool resulttt = ids.Contains(9);
+
+            Console.WriteLine(resulttt);
+            #endregion
+
         }
     }
 }
