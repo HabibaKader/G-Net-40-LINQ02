@@ -203,6 +203,12 @@ namespace Assignment02_LINQ
 
             foreach (var item in final) Console.WriteLine(item);
             #endregion
+
+            #region Question21
+            var R = ProductList.Zip(Customers, (p, c) => $"{p.ProductName} sold to {c.CompanyName}");
+
+            foreach (var item in R) Console.WriteLine(item);
+            #endregion
         }
     }
 }
