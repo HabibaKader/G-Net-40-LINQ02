@@ -51,6 +51,13 @@ namespace Assignment02_LINQ
             foreach (var p in page) Console.WriteLine(p.ProductName);
             #endregion
 
+            #region Question03
+            var resultt = ProductList.OrderBy(p => p.UnitPrice)
+                                     .TakeWhile(p => p.UnitPrice < 25);
+
+            foreach (var p in resultt) Console.WriteLine(p.ProductName);
+            #endregion
+
         }
     }
 }
