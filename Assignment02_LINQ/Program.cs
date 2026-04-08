@@ -191,6 +191,12 @@ namespace Assignment02_LINQ
 
             foreach (var row in table) Console.WriteLine(row);
             #endregion
+
+            #region Question19
+            var evens = Enumerable.Range(1, 30).Where(x => x % 2 == 0);
+
+            foreach (var x in evens) Console.WriteLine(x);
+            #endregion
         }
     }
 }
