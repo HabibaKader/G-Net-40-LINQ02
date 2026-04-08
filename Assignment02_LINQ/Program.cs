@@ -197,6 +197,12 @@ namespace Assignment02_LINQ
 
             foreach (var x in evens) Console.WriteLine(x);
             #endregion
+
+            #region Question20
+            var final = ProductList.Take(3).Select(p => p.ProductName).Concat(Customers.Take(3).Select(c => c.CompanyName));
+
+            foreach (var item in final) Console.WriteLine(item);
+            #endregion
         }
     }
 }
