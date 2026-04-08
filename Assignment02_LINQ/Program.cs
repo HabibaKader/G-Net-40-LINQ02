@@ -155,6 +155,15 @@ namespace Assignment02_LINQ
             foreach (var x in r)
                 Console.WriteLine(x);
             #endregion
+
+            #region Question14
+            string[] list1 = { "Germany", "France", "UK", "Spain" };
+            string[] list2 = { "france", "SPAIN", "Italy" };
+
+            var rr = list1.Except(list2, StringComparer.OrdinalIgnoreCase);
+
+            foreach (var c in rr) Console.WriteLine(c);
+            #endregion
         }
     }
 }
