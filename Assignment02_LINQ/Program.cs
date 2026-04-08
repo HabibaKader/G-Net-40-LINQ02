@@ -185,6 +185,12 @@ namespace Assignment02_LINQ
 
             Console.WriteLine(Product == null ? "Not found" : Product.ProductName);
             #endregion
+
+            #region Question18
+            var table = Enumerable.Range(1, 10).Select(x => $"7 x {x} = {7 * x}");
+
+            foreach (var row in table) Console.WriteLine(row);
+            #endregion
         }
     }
 }
