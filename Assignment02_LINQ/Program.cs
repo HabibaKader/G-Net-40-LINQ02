@@ -173,6 +173,12 @@ namespace Assignment02_LINQ
                 Console.WriteLine(product.ProductName);
             }
             #endregion
+
+            #region Question16
+            var prod = ProductList.First(p => p.UnitPrice > 50);
+
+            Console.WriteLine(prod.ProductName);
+            #endregion
         }
     }
 }
