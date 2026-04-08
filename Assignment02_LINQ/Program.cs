@@ -37,7 +37,13 @@ namespace Assignment02_LINQ
         };
         static void Main(string[] args)
         {
-            
+            #region Question01
+            var result = ProductList .OrderByDescending(p => p.UnitPrice)
+                                     .Take(3);
+
+            foreach (var p in result) Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            #endregion
+
         }
     }
 }
